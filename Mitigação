@@ -1,0 +1,57 @@
+Soluções de Mitigação para SQL Injection - OWASP Top 10 2021
+
+A03:2021 - Injeção (Injection)
+
+1. DEFESA PRIMÁRIA: USAR APIs SEGURAS
+Consultas Parametrizadas (Prepared Statements)
+
+ORM (Object-Relational Mapping)
+
+2. VALIDAÇÃO DE ENTRADA (Defesa em Camadas)
+Listas Brancas (Whitelisting)
+
+Escape Específico do Contexto
+
+3. CONTROLES DE SEGURANÇA ADICIONAIS
+Princípio do Menor Privilégio
+
+WAF (Web Application Firewall)
+
+4. TÉCNICAS AVANÇADAS
+Stored Procedures (com cuidado)
+Database Hardening
+
+5. VALIDAÇÃO E SANITIZAÇÃO EM MÚLTIPLAS CAMADAS
+Frontend (JavaScript)
+Backend (Validação em Camadas)
+
+6. FERRAMENTAS E PRÁTICAS DE DESENVOLVIMENTO
+SAST (Static Application Security Testing)
+•	SonarQube com regras para SQL injection
+•	Checkmarx, Fortify para análise estática
+•	GitHub Advanced Security / GitLab SAST
+DAST (Dynamic Application Security Testing)
+•	OWASP ZAP (Zed Attack Proxy)
+•	Burp Suite Professional
+•	Acunetix, Nessus
+
+7. MONITORAMENTO E DETECÇÃO
+Logging e Monitoramento
+IDS/IPS (Database)
+•	Snort regras para detectar SQL injection
+•	Oracle Database Firewall
+•	IBM Guardium
+
+8. TEMPLATE DE POLÍTICA DE SEGURANÇA
+
+9. CHECKLIST RÁPIDO DE IMPLEMENTAÇÃO
+•	Sempre usar prepared statements/parameterized queries
+•	Nunca concatenar inputs do usuário diretamente em queries
+•	Validar, sanitizar e escapar TODOS os inputs
+•	Implementar princípio do menor privilégio no BD
+•	Usar ORMs com parametrização automática
+•	Configurar WAF com regras para SQLi
+•	Manter logs de atividades suspeitas
+•	Realizar pentests regulares
+•	Treinar desenvolvedores em segurança
+•	Implementar rate limiting e captchas
