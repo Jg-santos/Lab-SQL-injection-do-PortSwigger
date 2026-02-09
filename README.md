@@ -23,7 +23,9 @@ o jeito mais comum de fazer isso é usando um payload sql para dar bypass
 no próprio portswigger tem uma página com vários payloads para serem usados
 https://portswigger.net/web-security/sql-injection/cheat-sheet
 o mais comum de ser usado para prova de conceito de se uma aplicação é vulnerável a sql é o:
+
 'or+1=1--
+
 onde:
 •	' - fecha uma string em uma consulta SQL
 •	or - Operador SQL
